@@ -215,7 +215,7 @@ export default function EnhancedTable({ tableData, onChange, headCells }) {
                   );
                 })}
               {emptyRows > 0 && (
-                <TableRow style={{ height: 10 * emptyRows }}>
+                <TableRow style={{ height: 1 * emptyRows }}>
                   <TableCell colSpan={6} />
                 </TableRow>
               )}

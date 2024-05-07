@@ -141,7 +141,7 @@ export function overrides(theme) {
           // },
           '&:hover': {
             '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: theme.palette.common.hover,
+              borderColor: 'none', //theme.palette.common.hover,
             },
           },
           // '&.Mui-focused': {
@@ -163,8 +163,9 @@ export function overrides(theme) {
     MuiTableCell: {
       styleOverrides: {
         head: {
+          ...theme.typography.h6,
           color: theme.palette.text.secondary,
-          backgroundColor: theme.palette.background.neutral,
+          // backgroundColor: theme.palette.common.white,
         },
       },
     },

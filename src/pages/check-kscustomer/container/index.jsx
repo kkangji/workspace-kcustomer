@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 // import axios from 'axios';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 import Button from '@/components/common/Buttons';
 import KsCustomerView from '@/pages/check-kscustomer/container/KsCustomerView';
 import KsCustomerForm from '@/pages/check-kscustomer/container/KsCustomerForm';
@@ -65,7 +67,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '000394232',
+        client_code: '0003',
         client_name: 'Ervin',
         marketing_name: 'Murray',
         marketing_id: '2929292929',
@@ -74,7 +76,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '003232302',
+        client_code: '0004',
         client_name: 'Brittany',
         marketing_name: 'Murray',
         marketing_id: '2929292929',
@@ -83,7 +85,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '0032323202',
+        client_code: '0005',
         client_name: 'Dylan',
         marketing_name: 'Murray',
         marketing_id: '2929292929',
@@ -92,7 +94,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '0002',
+        client_code: '0006',
         client_name: 'Raquel',
         marketing_name: 'Kohler',
         marketing_id: '2929292929',
@@ -101,7 +103,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '000394232',
+        client_code: '0007',
         client_name: 'Dylan',
         marketing_name: 'Murray',
         marketing_id: '2929292929',
@@ -110,7 +112,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '003232302',
+        client_code: '0008',
         client_name: 'Branson',
         marketing_name: 'Frami',
         marketing_id: '2929292929',
@@ -119,7 +121,7 @@ export default function KsCustomerContainer() {
         team: 'Kentucky',
       },
       {
-        client_code: '0032323202',
+        client_code: '0009',
         client_name: 'Raquel',
         marketing_name: 'Branson',
         marketing_id: '2929292929',
@@ -132,7 +134,9 @@ export default function KsCustomerContainer() {
 
   return (
     <React.Fragment>
-      <h1 className="h1">Customer</h1>
+      <Typography variant="h3" color="primary.main">
+        Customer
+      </Typography>
       <form onSubmit={handleSubmit(handleOnChange)} className="form">
         <KsCustomerForm control={control} />
         <div className="buttons">
@@ -149,6 +153,23 @@ export default function KsCustomerContainer() {
           <Button variant="contained" type="submit" text="Submit" />
         </div>
       </form>
+      <Divider
+        sx={{
+          margin: 4,
+          borderStyle: 'solid',
+          borderColor: 'action.outlined', //'outline.default',
+        }}
+      />
+      <Typography
+        variant="h5"
+        color="primary.main"
+        sx={{
+          margin: 4,
+          textAlign: 'center',
+        }}
+      >
+        ผลลัพธ์
+      </Typography>
       <KsCustomerView tableData={data} handleOnChange={handleOnChange} />
     </React.Fragment>
   );

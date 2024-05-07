@@ -83,7 +83,7 @@ export const action = {
   disabled: '#BDBDBD',
   disabledBackground: '#BDBDBD',
   focus: '#0b4d2c',
-  outlined: '#C3C3C3s',
+  outlined: '#C3C3C3',
   hoverOpacity: 0.08,
   disabledOpacity: 0.48,
 };
@@ -106,8 +106,8 @@ export function palette() {
     ...base,
     mode: 'light',
     text: {
-      primary: grey[800],
-      secondary: grey[600],
+      primary: '#191D23', //grey[800],
+      secondary: '#64748B',
       disabled: grey[500],
     },
     background: {

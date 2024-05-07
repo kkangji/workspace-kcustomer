@@ -20,12 +20,12 @@ export function responsiveFontSizes({ sm, md, lg }) {
   };
 }
 
-export const primaryFont = 'Public Sans, sans-serif';
-export const secondaryFont = 'Barlow, sans-serif';
+export const primaryFont = 'Kanit';
+// export const secondaryFont = 'Barlow, sans-serif';
 
 export const typography = {
   fontFamily: primaryFont,
-  fontSecondaryFamily: secondaryFont,
+  // fontSecondaryFamily: secondaryFont,
   fontWeightRegular: 400,
   fontWeightMedium: 500,
   fontWeightSemiBold: 600,
@@ -55,16 +55,16 @@ export const typography = {
     ...responsiveFontSizes({ sm: 20, md: 24, lg: 24 }),
   },
   h5: {
-    fontWeight: 700,
+    fontWeight: 600,
     lineHeight: 1.5,
-    fontSize: pxToRem(18),
+    fontSize: pxToRem(32),
     ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
   },
   h6: {
-    fontWeight: 700,
+    fontWeight: 600,
     lineHeight: 28 / 18,
-    fontSize: pxToRem(17),
-    ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
+    fontSize: pxToRem(12),
+    ...responsiveFontSizes({ sm: 12, md: 12, lg: 16 }),
   },
   subtitle1: {
     fontWeight: 600,
