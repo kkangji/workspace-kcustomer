@@ -1,23 +1,14 @@
 import { Controller } from 'react-hook-form';
-// import TextFieldProps from '@mui/material/TextFieldProps';
 import TextField from '@mui/material/TextField';
-// import { TextField, TextFieldProps } from "@mui/material";
 import { textFieldValidator } from '@/components/validators';
 
-// type Props<T extends FieldValues> = Omit<TextFieldProps, "name"> & {
-//   control: Control<T, object>;
-//   disableErrorSpace?: boolean;
-//   name: Path<T>;
-//   maxLength?: number;
-// };
-
-const InputField = ({
-  control,
+const InputForm = ({
   disableErrorSpace,
-  name,
-  required,
-  label,
   maxLength = 50,
+  required,
+  control,
+  name,
+  label,
   sx,
   ...restProps
 }) => (
@@ -29,12 +20,10 @@ const InputField = ({
         inputRef={ref}
         error={!!error}
         label={`${label ? `${label}${required ? '*' : ''}` : ''}`}
-        //" " Space reserves space under for error message
         helperText={error?.message || (disableErrorSpace ? '' : ' ')}
         inputProps={{ maxLength }}
         fullWidth
         sx={{
-          width: '25ch',
           ...sx,
         }}
       />
@@ -43,9 +32,9 @@ const InputField = ({
     control={control}
     rules={{
       validate: textFieldValidator(required),
-      required: required ? 'Required' : '',
+      required: required ? 'ข้อมูลไม่ถูกต้อง' : '',
     }}
   />
 );
 
-export default InputField;
+export default InputForm;

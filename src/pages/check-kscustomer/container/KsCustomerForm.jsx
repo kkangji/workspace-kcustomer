@@ -1,32 +1,37 @@
-// import React from 'react';
-// import Container from '@mui/material/Container';
-// import { useForm } from 'react-hook-form';
-import Button from '@/components/common/Buttons';
-import InputField from '@/components/common/InputField';
+import InputForm from '@/components/common/InputForm';
+import NumberForm from '@/components/common/NumberForm';
 
 export default function KsCustomerForm({ control }) {
   return (
     <>
       <div className="container">
-        <InputField control={control} name="code" label="Code" required />
-      </div>
-      <div className="container">
-        <InputField
+        <NumberForm
           control={control}
-          name="firstName"
-          label="First Name"
-          required
+          name="customer_code"
+          label="Customer Code"
+        />
+        {/* </div>
+      <div className="container"> */}
+        <InputForm control={control} name="name" label="Name" />
+        {/* </div>
+      <div className="container"> */}
+        <InputForm control={control} name="surname" label="Surname" />
+        {/* </div>
+      <div className="container"> */}
+        <NumberForm
+          control={control}
+          name="tel_no"
+          label="Tel No."
+          phoneNumber
+        />
+        {/* </div>
+      <div className="container"> */}
+        <InputForm
+          control={control}
+          name="citizen_id"
+          label="Citizen ID / Passport No."
         />
       </div>
-      <div className="container">
-        <InputField
-          control={control}
-          name="lastName"
-          label="Last Name"
-          required
-        />
-      </div>
-      <Button variant="contained" type="submit" text="Submit" />
     </>
   );
 }
